@@ -13,7 +13,6 @@
 .gallery-images {
     display: flex;
     flex-wrap: wrap;
-    background-color: blue;
 }
 
 .gallery-image {
@@ -22,3 +21,21 @@
     object-fit: cover; 
     margin: 5px;
 }
+
+/* Custom styles for gallery comments */
+.gallery-images .comment-list {
+    margin-top: 20px;
+}
+
+.gallery-images .comment-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.gallery-images .comment-reply-link {
+    font-weight: bold;
+    margin-top: 5px;
+}
+

@@ -9,10 +9,11 @@ class Gallery_CPT {
                     'singular_name' => __( 'Gallery', 'snaps' )
                 ),
                 'public' => true,
-                'supports' => array( 'title', 'thumbnail' ),
+                'supports' => array( 'title', 'thumbnail', 'comments' ), 
                 'menu_icon' => 'dashicons-format-gallery',
                 'has_archive' => true,
             )
         );
     }
 }
+
