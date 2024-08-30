@@ -9,27 +9,24 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Create the media frame
         frame = wp.media({
             title: 'Select or Upload Images',
             button: {
                 text: 'Use these images'
             },
-            multiple: true // Allow multiple image selection
+            multiple: true 
         });
 
-        // When images are selected
         frame.on('select', function() {
             const selection = frame.state().get('selection');
             selection.each(function(attachment) {
                 const imageUrl = attachment.toJSON().url;
 
-                // Create list item with image and remove button
                 const li = document.createElement('li');
                 const img = document.createElement('img');
                 img.src = imageUrl;
-                img.width = 300; // Set desired width
-                img.height = 400; // Set desired height
+                img.width = 300; 
+                img.height = 400; 
 
                 li.appendChild(img);
 
@@ -41,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 document.getElementById('gallery-images-list').appendChild(li);
 
-                // Update the hidden input field with image URLs
                 updateHiddenField();
             });
         });
@@ -49,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         frame.open();
     });
 
-    // Remove image on clicking the 'Remove' button
     document.getElementById('gallery-images-list').addEventListener('click', function(e) {
         if (e.target && e.target.classList.contains('remove-image')) {
             e.preventDefault();
@@ -59,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Update the hidden field containing all image URLs
     function updateHiddenField() {
         const imagesData = [];
         const listItems = document.querySelectorAll('#gallery-images-list li');

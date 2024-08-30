@@ -18,7 +18,7 @@ class Gallery_MetaBox {
         $images_data = $stored_meta ? json_decode($stored_meta, true) : [];
         ?>
 
-        <div id="gallery_images">
+        <div id="gallery_images gallery_wrapper">
             <a href="#" id="add-gallery-image" class="button">Add Image</a>
             <ul id="gallery-images-list">
                 <?php
@@ -51,7 +51,6 @@ class Gallery_MetaBox {
             return;
         }
 
-        // Save image data
         if (isset($_POST['snaps_images'])) {
             $images_data = json_decode(stripslashes($_POST['snaps_images']), true);
             if (is_array($images_data)) {

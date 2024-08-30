@@ -17,12 +17,13 @@ class Gallery_Display {
                     $gallery_output .= '</div>';
                 }
             }
+            
             $gallery_output .= '</div>';
 
             $content .= $gallery_output;
 
             ob_start();
-            comments_template();
+            // comments_template()
             $content .= ob_get_clean();
         }
 
