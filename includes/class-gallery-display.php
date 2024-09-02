@@ -10,11 +10,11 @@ class Gallery_Display {
             $images_data = $images_data ? json_decode($images_data, true) : [];
     
             $settings = get_post_meta($post->ID, 'snaps_settings', true);
-            $width = isset($settings['snaps_width']) ? esc_attr($settings['snaps_width']) : '300px';
-            $height = isset($settings['snaps_height']) ? esc_attr($settings['snaps_height']) : '400px';
+            $width = isset($settings['snaps_width']) ? esc_attr($settings['snaps_width']) : '200px';
+            $height = isset($settings['snaps_height']) ? esc_attr($settings['snaps_height']) : '250px';
             $spacing = isset($settings['snaps_spacing']) ? esc_attr($settings['snaps_spacing']) : '10px';
             $hover_effect = isset($settings['snaps_hover_effect']) ? esc_attr($settings['snaps_hover_effect']) : '';
-            $columns = isset($settings['snaps_columns']) ? esc_attr($settings['snaps_columns']) : '3';  // Fetch columns setting
+            $columns = isset($settings['snaps_columns']) ? esc_attr($settings['snaps_columns']) : '3';
     
             $inline_styles = "
                 <style>
@@ -66,9 +66,6 @@ class Gallery_Display {
     }
     
 }
-
-add_filter('the_content', array('Gallery_Display', 'display_gallery_in_content'));
-
 
 add_filter('the_content', array('Gallery_Display', 'display_gallery_in_content'));
 

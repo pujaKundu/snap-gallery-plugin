@@ -19,8 +19,8 @@ class Gallery_MetaBox {
         $images_data = $stored_meta ? json_decode($stored_meta, true) : [];
     
         $settings = get_post_meta($post->ID, 'snaps_settings', true);
-        $width = isset($settings['snaps_width']) ? esc_attr($settings['snaps_width']) : '300px';
-        $height = isset($settings['snaps_height']) ? esc_attr($settings['snaps_height']) : '400px';
+        $width = isset($settings['snaps_width']) ? esc_attr($settings['snaps_width']) : '200px';
+        $height = isset($settings['snaps_height']) ? esc_attr($settings['snaps_height']) : '250px';
         $spacing = isset($settings['snaps_spacing']) ? esc_attr($settings['snaps_spacing']) : '10px';
         $hover_effect = isset($settings['snaps_hover_effect']) ? esc_attr($settings['snaps_hover_effect']) : 'none';
         $columns = isset($settings['snaps_columns']) ? esc_attr($settings['snaps_columns']) : '3'; 

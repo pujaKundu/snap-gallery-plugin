@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const li = document.createElement('li');
                 const img = document.createElement('img');
                 img.src = imageUrl;
-                img.width = 300; 
-                img.height = 400; 
+                img.width = 200; 
+                img.height = 250; 
 
                 li.appendChild(img);
 
