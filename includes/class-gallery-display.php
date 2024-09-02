@@ -22,9 +22,6 @@ class Gallery_Display {
 
             $content .= $gallery_output;
 
-            ob_start();
-            // comments_template()
-            $content .= ob_get_clean();
         }
 
         return $content;

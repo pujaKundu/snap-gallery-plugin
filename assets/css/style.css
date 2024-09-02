@@ -1,3 +1,11 @@
+a.url,b.fn{
+    margin-right: 5px;
+}
+
+a.comment-edit-link{
+    margin-left:5px;
+}
+
 .gallery-images {
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -71,12 +79,14 @@
 
 .comment-list {
     list-style: none; 
-    padding: 0;
+    padding: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .comment-list li {
     margin-bottom: 10px;
-    padding: 15px;
+    padding: 5px;
     border-radius: 5px;
     position: relative;
 }

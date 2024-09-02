@@ -35,7 +35,6 @@ class Snaps {
         require_once SNAPS_PATH . 'includes/class-snaps-cpt.php';
         require_once SNAPS_PATH . 'includes/class-snaps-metabox.php';
         require_once SNAPS_PATH . 'includes/class-snaps-shortcode.php';
-        require_once SNAPS_PATH . 'templates/gallery-template.php'; 
         require_once SNAPS_PATH . 'includes/class-gallery-display.php'; 
 
     }
@@ -45,7 +44,6 @@ class Snaps {
         add_action( 'add_meta_boxes', array( 'Gallery_MetaBox', 'add_meta_box' ) );
         add_action( 'save_post', array( 'Gallery_MetaBox', 'save_meta_box_data' ) );
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-        // add_shortcode( 'snaps_image_gallery', array( 'Gallery_Shortcode', 'render' ) );
         add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_frontend_styles' ) );
         add_shortcode( 'snaps_image_gallery', array( 'Gallery_Shortcode', 'render' ) );
     }
