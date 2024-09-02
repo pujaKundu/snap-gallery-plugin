@@ -6,15 +6,19 @@ a.comment-edit-link{
     margin-left:5px;
 }
 
-.gallery-images {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 20px;
-    margin-top: 20px;
+.hover-options{
+    display: flex;
+    column-gap: 10px;
 }
+
 #gallery-images-list{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(7,1fr);
+    grid-gap:10px;
+}
+.list-image{
+    width: 100%;
+    height: 100%;
 }
 .gallery-item {
     margin-bottom: 10px;
@@ -31,10 +35,6 @@ a.comment-edit-link{
     display: block;
 }
 
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
 .remove-image {
     display: block;
     text-align: center;
@@ -42,6 +42,11 @@ a.comment-edit-link{
     font-size: 12px;
     color: red;
     cursor: pointer;
+}
+
+.gallery-customizations{
+    margin-top: 30px;
+    padding: 20px;
 }
 
 .comment-section {

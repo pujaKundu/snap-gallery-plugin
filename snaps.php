@@ -57,7 +57,6 @@ class Snaps {
         }
     }
 
-
     public function enqueue_frontend_styles() {
         wp_enqueue_style( 'snaps-gallery-style', SNAPS_URL . 'assets/css/style.css' );
         wp_enqueue_script( 'snaps-gallery-script', SNAPS_URL . 'assets/js/script.js', array( 'jquery' ), null, true );

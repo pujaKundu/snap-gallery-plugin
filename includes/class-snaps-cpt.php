@@ -16,4 +16,3 @@ class Gallery_CPT {
         );
     }
 }
-
