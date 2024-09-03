@@ -35,8 +35,8 @@ class Snaps {
         require_once SNAPS_PATH . 'includes/class-snaps-cpt.php';
         require_once SNAPS_PATH . 'includes/class-snaps-metabox.php';
         require_once SNAPS_PATH . 'includes/class-snaps-shortcode.php';
-        require_once SNAPS_PATH . 'includes/class-gallery-display.php'; 
-
+        require_once SNAPS_PATH . 'includes/class-gallery-display.php';
+        require_once SNAPS_PATH . 'includes/class-gallery-customization-metabox.php'; 
     }
 
     private function init_hooks() {
