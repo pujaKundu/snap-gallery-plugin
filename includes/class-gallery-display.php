@@ -8,6 +8,8 @@ class Gallery_Display {
     
             $images_data = get_post_meta($post->ID, 'snaps_images', true);
             $images_data = $images_data ? json_decode($images_data, true) : [];
+
+            $featured_image = get_the_post_thumbnail($post->ID, 'full', array('class' => 'custom-featured-image'));
     
             $settings = get_post_meta($post->ID, 'snaps_settings', true);
             $width = isset($settings['snaps_width']) ? esc_attr($settings['snaps_width']) : '100%';
@@ -48,15 +50,14 @@ class Gallery_Display {
                     }
                 </style>
             ";
+
+            $gallery_output = '<div class="gallery-featured-image">' . $featured_image . '</div>';
     
             $gallery_output = '<div class="gallery-images">';
             foreach ($images_data as $image_data) {
                 if (is_array($image_data) && isset($image_data['url'])) {
                     $gallery_output .= '<div class="gallery-item ' . esc_attr($hover_effect) . '">';
-                    // $gallery_output .= '<img src="' . esc_url($image_data['url']) . '" alt="' . esc_attr($image_data['description'] ?? '') . '" />';
-                    $gallery_output .= '<img src="' . esc_url($image_data['url']) . '" alt="' . esc_attr($image_data['description'] ?? '') . '" 
-srcset="' . esc_attr(wp_get_attachment_image_srcset($image_id)) . '" 
-sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" />';
+                    $gallery_output .= '<img src="' . esc_url($image_data['url']) . '" alt="' . esc_attr($image_data['description'] ?? '') . '" />';
 
                     $gallery_output .= '</div>';
                 }
