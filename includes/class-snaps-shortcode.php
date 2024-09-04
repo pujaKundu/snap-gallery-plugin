@@ -4,9 +4,8 @@ class Gallery_Shortcode {
     public static function render() {
 
         global $post;
-        // require_once SNAPS_PATH;
+        
         $images_data = get_post_meta($post->ID, 'snaps_images', true);
-        // $images_data = get_post_meta($post->ID, 'snaps_images', true);
         $output = '';
 
         if ($images_data) {

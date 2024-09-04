@@ -84,6 +84,4 @@ class Snaps_Carousel_Shortcode {
 Snaps_Carousel_Shortcode::register_shortcode();
 
 
-
-
 ?>
