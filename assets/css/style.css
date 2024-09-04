@@ -218,10 +218,50 @@ a.comment-edit-link{
     column-gap: 15px;
 }
 
+.snaps-carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto; 
+    position: relative; 
+}
 .snaps-carousel {
     display: flex;
-    overflow: hidden;
     position: relative;
+    width: 90%;
+    height: auto;
+}
+.carousel-item {
+    display: none; 
+    flex: 1 0 100%; 
+    text-align: center; 
+}
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10; 
+}
+.carousel-control.prev {
+    left: 0;
+}
+.carousel-control.next {
+    right: 0; 
 }
 
 .snaps-carousel .carousel-item {
@@ -238,36 +278,6 @@ a.comment-edit-link{
     width: 100%; 
     height: auto;
     border-radius: 30px;
-}
-
-.snaps-carousel .carousel-item h3 {
-    text-align: center; 
-    margin: 10px 0;
-}
-
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 10;
-    opacity: 0.7;
-}
-
-.carousel-control:hover {
-    opacity: 1;
-}
-
-.carousel-control.prev {
-    left: 10px; 
-}
-
-.carousel-control.next {
-    right: 10px; 
 }
 
 .paginate-btn{
